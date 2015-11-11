@@ -1,0 +1,11 @@
+LOG ..
+ - Project Start : 20151109
+ - small step from avenir step 1 - 6 . DONE !
+
+IN PROSES ..
+
+
+
+NEXT PROSES ..
+ install HMVC ..
+ 
