@@ -7,9 +7,9 @@ class MY_Controller extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();
-		$this->data['page_title'] = 'My CMS';
+		$this->data['page_title'] = 'RTRShopp';
 		$this->data['before_head'] = '';
-		$this->data['before_body'] ='';
+		$this->data['before_body'] = '';
 	}
 
 	protected function render($the_view = NULL, $template = 'master')
@@ -21,7 +21,7 @@ class MY_Controller extends CI_Controller {
 		}
 		else
 		{
-			$this->data['the_view_content'] = (is_null($the_view)) ? '' : $this->load->view($the_view,$this->data, TRUE);;
+			$this->data['the_view_content'] = (is_null($the_view)) ? '' : $this->load->view($the_view,$this->data, TRUE);
 			$this->load->view('templates/'.$template.'_view', $this->data);
 		}
 	}
@@ -36,8 +36,8 @@ class Admin_Controller extends MY_Controller {
 		$this->load->library('ion_auth');
 		if (!$this->ion_auth->logged_in())
 		{
-		  //redirect them to the login page
-		  redirect('admin/user/login', 'refresh');
+		  	//redirect them to the login page
+		  	redirect('admin/user/login', 'refresh');
 		}
 		$this->data['current_user'] = $this->ion_auth->user()->row();
 		$this->data['current_user_menu'] = '';
@@ -45,7 +45,7 @@ class Admin_Controller extends MY_Controller {
 		{
 		  $this->data['current_user_menu'] = $this->load->view('templates/_parts/user_menu_admin_view.php', NULL, TRUE);
 		}
-		$this->data['page_title'] = 'My CMS - Dashboard';
+		$this->data['page_title'] = 'RTRShopp - Dashboard';
 	}
 
 	protected function render($the_view = NULL, $template = 'admin_master')
@@ -60,7 +60,7 @@ class Public_Controller extends MY_Controller {
 	function __construct()
 	{
 		parent::__construct();
-		echo 'This is from public controller';
+		// echo 'This is from public controller';
 	}
 	
 }

@@ -1,8 +1,11 @@
-<?php defined('BASEPATH') OR exit('No direct script access allowed');
+<?php (defined('BASEPATH')) OR exit('No direct script access allowed');
 
-class MY_Loader extends CI_Loader 
+/* load the MX_Loader class */
+require APPPATH."third_party/MX/Loader.php";
+
+class MY_Loader extends MX_Loader
 {
-    public function __construct() 
+	public function __construct() 
     {
         parent::__construct();
     }
@@ -29,5 +32,3 @@ class MY_Loader extends CI_Loader
         return $this->_ci_models;
     }
 }
-/* End of file 'MY_Loader' */
-/* Location: ./application/core/MY_Loader.php */

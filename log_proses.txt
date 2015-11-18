@@ -1,11 +1,26 @@
 LOG ..
  - Project Start : 20151109
  - small step from avenir step 1 - 6 . DONE !
+ - install HMVC ..
+ - step 2 and 3 DONE !
+ - bootstrap blm ke load. SOLVED !!! problem .htaccess
 
 IN PROSES ..
-
-
-
-NEXT PROSES ..
- install HMVC ..
+ template admin
+  - dashgum free
+  - 
  
+
+
+* SESUDAH NGODING USAHAKAN LANGSUNG PUSH KE GIT-REPOSITORY(UPLOAD KE GITHUB)
+	$ git status
+	$ git add .
+	$ git commit -m "penamaan commit" 
+	$ git push
+	$ git status
+
+LAST git push : "first commit"
+
+
+NEXT PROSES .. 
+ - step 3.1
