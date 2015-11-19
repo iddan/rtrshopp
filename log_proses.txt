@@ -6,11 +6,12 @@ LOG ..
  - bootstrap blm ke load. SOLVED !!! problem .htaccess
 
 IN PROSES ..
- template admin
-  - dashgum free
-  - 
- 
+ - install template adminLTE 2.3.0
+ 	- sudah terpasang tinggal rapihkan lagi ..
+ - cara push tetapi ada file yang di hapus ..
 
+Default Login
+Username: admin@admin.com Password: password
 
 * SESUDAH NGODING USAHAKAN LANGSUNG PUSH KE GIT-REPOSITORY(UPLOAD KE GITHUB)
 	$ git status
