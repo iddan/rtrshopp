@@ -4,11 +4,14 @@ LOG ..
  - install HMVC ..
  - step 2 and 3 DONE !
  - bootstrap blm ke load. SOLVED !!! problem .htaccess
+ - design login view . DONE !!!
 
 IN PROSES ..
  - install template adminLTE 2.3.0
  	- sudah terpasang tinggal rapihkan lagi ..
- - cara push tetapi ada file yang di hapus ..
+
+NEXT PROSES .. 
+ - 
 
 Default Login
 Username: admin@admin.com Password: password
@@ -20,8 +23,4 @@ Username: admin@admin.com Password: password
 	$ git push
 	$ git status
 
-LAST git push : "first commit"
-
-
-NEXT PROSES .. 
- - step 3.1
+LAST git push : "design login view"

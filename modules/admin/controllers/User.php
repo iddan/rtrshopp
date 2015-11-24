@@ -15,7 +15,7 @@ class User extends MY_Controller {
  
     public function login()
     {
-        $this->data['page_title'] = 'Login';
+        $this->data['page_title'] = 'RTRShopp | Login';
         if($this->input->post())
         {
             $this->load->library('form_validation');
@@ -37,7 +37,8 @@ class User extends MY_Controller {
             }
         }
         $this->load->helper('form');
-        $this->render('admin/login_view','admin_master');
+        $this->load->view('admin/login_view');
+        // $this->render('admin/login_view','admin_master');
     }
   
     public function logout()

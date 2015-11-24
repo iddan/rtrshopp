@@ -160,12 +160,6 @@
       		<div class="control-sidebar-bg"></div>
     	</div><!-- ./wrapper -->
 
-		<!-- <footer>
-			<div class="container">
-		  		<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo (ENVIRONMENT === 'development') ? 'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
-		  	</div>
-		</footer> -->
-
 		<!-- jQuery 2.1.4 -->
 	    <script src="<?php echo site_url('assets/admin/plugins/jQuery/jQuery-2.1.4.min.js'); ?>"></script>
 	    <!-- Bootstrap 3.3.5 -->

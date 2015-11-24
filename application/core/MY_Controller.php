@@ -36,7 +36,6 @@ class Admin_Controller extends MY_Controller {
 		$this->load->library('ion_auth');
 		if (!$this->ion_auth->logged_in())
 		{
-		  	//redirect them to the login page
 		  	redirect('admin/user/login', 'refresh');
 		}
 		$this->data['current_user'] = $this->ion_auth->user()->row();
