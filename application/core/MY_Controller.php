@@ -44,7 +44,7 @@ class Admin_Controller extends MY_Controller {
 		{
 		  $this->data['current_user_menu'] = $this->load->view('templates/_parts/user_menu_admin_view.php', NULL, TRUE);
 		}
-		$this->data['page_title'] = 'RTRShopp - Dashboard';
+		$this->data['page_title'] = 'Dashboard';
 	}
 
 	protected function render($the_view = NULL, $template = 'admin_master')

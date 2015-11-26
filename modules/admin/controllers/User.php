@@ -10,12 +10,12 @@ class User extends MY_Controller {
  
     public function index()
     {
-  
+        redirect('admin', 'refresh');
     }
  
     public function login()
     {
-        $this->data['page_title'] = 'RTRShopp | Login';
+        $this->data['page_title'] = 'RTRShopp | Admin Login';
         if($this->input->post())
         {
             $this->load->library('form_validation');

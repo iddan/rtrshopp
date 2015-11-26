@@ -1,8 +1,8 @@
 			<footer class="main-footer">
+				Page rendered in <strong>{elapsed_time}</strong> seconds.
 	        	<div class="pull-right hidden-xs">
-	          		<b>Version</b> 2.3.0
+	          		<?php echo (ENVIRONMENT === 'development') ? 'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?>
 	        	</div>
-	        	Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo (ENVIRONMENT === 'development') ? 'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?>
 	      	</footer>
 
 	      	<!-- Control Sidebar -->
@@ -164,6 +164,9 @@
 	    <script src="<?php echo site_url('assets/admin/plugins/jQuery/jQuery-2.1.4.min.js'); ?>"></script>
 	    <!-- Bootstrap 3.3.5 -->
 	    <script src="<?php echo site_url('assets/admin/bootstrap/js/bootstrap.min.js'); ?>"></script>
+	    <!-- DataTables -->
+    	<script src="<?php echo site_url('assets/admin/plugins/datatables/jquery.dataTables.min.js'); ?>"></script>
+    	<script src="<?php echo site_url('assets/admin/plugins/datatables/dataTables.bootstrap.min.js'); ?>"></script>
 	    <!-- SlimScroll -->
 	    <script src="<?php echo site_url('assets/admin/plugins/slimScroll/jquery.slimscroll.min.js'); ?>"></script>
 	    <!-- FastClick -->
@@ -172,7 +175,19 @@
 	    <script src="<?php echo site_url('assets/admin/dist/js/app.min.js'); ?>"></script>
 	    <!-- AdminLTE for demo purposes -->
 	    <script src="<?php echo site_url('assets/admin/dist/js/demo.js'); ?>"></script>
-
+	    <script>
+      		$(function () {
+	        	$("#table1").DataTable();
+		        $('#table2').DataTable({
+		          	"paging": true,
+		          	"lengthChange": false,
+		          	"searching": false,
+		          	"ordering": true,
+		          	"info": true,
+		          	"autoWidth": false
+		        });
+      		});
+    	</script>
 		<?php echo $before_body; ?>
 	</body>
 </html>
