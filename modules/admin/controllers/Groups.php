@@ -15,6 +15,11 @@ class Groups extends Admin_Controller {
     public function index()
     {
         $this->data['page_title'] = 'Groups';
+        
+        $this->breadcrumbs->push('<i class="fa fa-dashboard"></i> Dashboard', '/admin');
+        $this->breadcrumbs->push('Management', '/admin#');
+        $this->breadcrumbs->push('Groups', '/admin/groups');
+
         $this->data['groups'] = $this->ion_auth->groups()->result();
         $this->render('admin/groups/list_groups_view');
     }
@@ -23,9 +28,13 @@ class Groups extends Admin_Controller {
     {
         $this->data['page_title'] = 'Create Group';
 
+        $this->breadcrumbs->push('<i class="fa fa-dashboard"></i> Dashboard', '/admin');
+        $this->breadcrumbs->push('Management', '/admin#');
+        $this->breadcrumbs->push('Groups', '/admin/groups');
+
         $this->load->library('form_validation');
-        $this->form_validation->set_rules('group_name','Group name','trim|required|is_unique[groups.name]');
-        $this->form_validation->set_rules('group_description','Group description','trim|required');
+        $this->form_validation->set_rules('group_name','Group Name','trim|required|is_unique[groups.name]');
+        $this->form_validation->set_rules('group_description','Group Description','trim|required');
 
         if($this->form_validation->run()===FALSE)
         {
@@ -37,7 +46,7 @@ class Groups extends Admin_Controller {
             $group_name = $this->input->post('group_name');
             $group_description = $this->input->post('group_description');
             $this->ion_auth->create_group($group_name, $group_description);
-            $this->session->set_flashdata('message',$this->ion_auth->messages());
+            $this->session->set_flashdata('message', $this->ion_auth->messages());
             redirect('admin/groups','refresh');
         }
     }
@@ -46,6 +55,10 @@ class Groups extends Admin_Controller {
     {
         $group_id = $this->input->post('group_id') ? $this->input->post('group_id') : $group_id;
         $this->data['page_title'] = 'Edit Group';
+
+        $this->breadcrumbs->push('<i class="fa fa-dashboard"></i> Dashboard', '/admin');
+        $this->breadcrumbs->push('Management', '/admin#');
+        $this->breadcrumbs->push('Groups', '/admin/groups');
 
         $this->load->library('form_validation');       
         $this->form_validation->set_rules('group_name','Group name','trim|required');

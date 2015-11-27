@@ -27,6 +27,7 @@ class User extends MY_Controller {
                 $remember = (bool) $this->input->post('remember');
                 if ($this->ion_auth->login($this->input->post('identity'), $this->input->post('password'), $remember))
                 {
+                    $this->session->set_flashdata('message', 'Welcome to Admin area');
                     redirect('admin', 'refresh');
                 }
                 else
@@ -38,7 +39,6 @@ class User extends MY_Controller {
         }
         $this->load->helper('form');
         $this->load->view('admin/login_view');
-        // $this->render('admin/login_view','admin_master');
     }
   
     public function logout()

@@ -2,13 +2,13 @@
 <!-- Default box -->
 <div class="box">
     <div class="box-header">
-        <a href="<?php echo site_url('admin/groups/create');?>" class="btn btn-primary">Create group</a>
+        <a href="<?php echo site_url('admin/groups/create');?>" class="btn btn-primary">Create Group</a>
     </div>
     <div class="box-body">
         <?php
             if(!empty($groups))
             {
-                echo '<table id="table1" class="table table-bordered table-striped">';
+                echo '<table id="table" class="table table-bordered table-striped">';
                     echo '<thead><tr><th>No.</th><th>Group Name</th><th>Description Group</th><th>Action</th></tr></thead><tbody>';
                 $no = 1;
                 foreach($groups as $group)

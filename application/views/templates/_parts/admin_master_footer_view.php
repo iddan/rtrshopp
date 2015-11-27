@@ -177,15 +177,7 @@
 	    <script src="<?php echo site_url('assets/admin/dist/js/demo.js'); ?>"></script>
 	    <script>
       		$(function () {
-	        	$("#table1").DataTable();
-		        $('#table2').DataTable({
-		          	"paging": true,
-		          	"lengthChange": false,
-		          	"searching": false,
-		          	"ordering": true,
-		          	"info": true,
-		          	"autoWidth": false
-		        });
+	        	$("#table").DataTable();
       		});
     	</script>
 		<?php echo $before_body; ?>

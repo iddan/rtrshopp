@@ -6,13 +6,13 @@ LOG ..
  - bootstrap blm ke load. SOLVED !!! problem .htaccess
  - design login view . DONE !!!
  - install template adminLTE 2.3.0 DONE !!!
- - list group view . DONE !!
+ - Menu Groups . DONE !!
 
 IN PROSES ..
  
 
 NEXT PROSES .. 
- - view create group ..
+ - Menu Users ..
 
 Default Login
 Username: admin@admin.com Password: password
@@ -24,4 +24,4 @@ Username: admin@admin.com Password: password
 	$ git push
 	$ git status
 
-LAST git push : "creating group management"
+LAST git push : "menu Groups done!"

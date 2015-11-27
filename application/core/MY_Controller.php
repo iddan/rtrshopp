@@ -34,17 +34,23 @@ class Admin_Controller extends MY_Controller {
 	{
 		parent::__construct();
 		$this->load->library('ion_auth');
+        $this->load->library('breadcrumbs');
+
 		if (!$this->ion_auth->logged_in())
 		{
 		  	redirect('admin/user/login', 'refresh');
 		}
+
 		$this->data['current_user'] = $this->ion_auth->user()->row();
 		$this->data['current_user_menu'] = '';
 		if($this->ion_auth->in_group('admin'))
 		{
 		  $this->data['current_user_menu'] = $this->load->view('templates/_parts/user_menu_admin_view.php', NULL, TRUE);
 		}
+		
 		$this->data['page_title'] = 'Dashboard';
+
+		$this->breadcrumbs->push('<i class="fa fa-dashboard"></i> Dashboard', '/admin');
 	}
 
 	protected function render($the_view = NULL, $template = 'admin_master')
