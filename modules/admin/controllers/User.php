@@ -50,6 +50,10 @@ class User extends MY_Controller {
     public function profile()
     {
         $this->data['page_title'] = 'User Profile';
+
+        $this->breadcrumbs->push('<i class="fa fa-dashboard"></i> Dashboard', '/admin');
+        $this->breadcrumbs->push('Profile Page', '/admin/user/profile');
+
         $user = $this->ion_auth->user()->row();
         $this->data['user'] = $user;
         $this->data['current_user_menu'] = '';
@@ -59,14 +63,14 @@ class User extends MY_Controller {
         }
      
         $this->load->library('form_validation');
-        $this->form_validation->set_rules('first_name','First name','trim');
-        $this->form_validation->set_rules('last_name','Last name','trim');
+        $this->form_validation->set_rules('first_name','First Name','trim');
+        $this->form_validation->set_rules('last_name','Last Name','trim');
         $this->form_validation->set_rules('company','Company','trim');
         $this->form_validation->set_rules('phone','Phone','trim');
      
         if($this->form_validation->run()===FALSE)
         {
-            $this->render('admin/user/profile_view','admin_master');
+            $this->render('admin/user/profile_view', 'admin_master');
         }
         else
         {
@@ -76,12 +80,11 @@ class User extends MY_Controller {
                 'company' => $this->input->post('company'),
                 'phone' => $this->input->post('phone')
             );
-            if(strlen($this->input->post('password'))>=6) 
-                $new_data['password'] = $this->input->post('password');
-                $this->ion_auth->update($user->id, $new_data);
+            if(strlen($this->input->post('password'))>=6) $new_data['password'] = $this->input->post('password');
+            $this->ion_auth->update($user->id, $new_data);
      
             $this->session->set_flashdata('message', $this->ion_auth->messages());
-            redirect('admin/user/profile','refresh');
+            redirect('admin/user/profile', 'refresh');
         }
     }
 }

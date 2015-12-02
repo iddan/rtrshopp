@@ -8,7 +8,7 @@ class Groups extends Admin_Controller {
         if(!$this->ion_auth->in_group('admin'))
         {
             $this->session->set_flashdata('message', 'You are not allowed to visit the Groups page');
-            redirect('admin','refresh');
+            redirect('admin', 'refresh');
         }
     }
 
@@ -47,7 +47,7 @@ class Groups extends Admin_Controller {
             $group_description = $this->input->post('group_description');
             $this->ion_auth->create_group($group_name, $group_description);
             $this->session->set_flashdata('message', $this->ion_auth->messages());
-            redirect('admin/groups','refresh');
+            redirect('admin/groups', 'refresh');
         }
     }
 
@@ -94,12 +94,12 @@ class Groups extends Admin_Controller {
     {
         if(is_null($group_id))
         {
-            $this->session->set_flashdata('message','There\'s no group to delete');
+            $this->session->set_flashdata('message', 'There\'s no Group to delete');
         }
         else
         {
             $this->ion_auth->delete_group($group_id);
-            $this->session->set_flashdata('message',$this->ion_auth->messages());
+            $this->session->set_flashdata('message', $this->ion_auth->messages());
         }
         redirect('admin/groups','refresh');
     }

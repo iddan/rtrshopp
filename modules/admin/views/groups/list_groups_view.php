@@ -1,5 +1,3 @@
-<?php defined('BASEPATH') OR exit('No direct script access allowed');?>
-<!-- Default box -->
 <div class="box">
     <div class="box-header">
         <a href="<?php echo site_url('admin/groups/create');?>" class="btn btn-primary">Create Group</a>
@@ -14,7 +12,7 @@
                 foreach($groups as $group)
                 {
                     echo '<tr>';
-                    echo '<td>'.$no ++.'.</td><td>'.$group->name.'</td><td>'.$group->description.'</td><td>'.anchor('admin/groups/edit/'.$group->id,'<span class="glyphicon glyphicon-pencil"></span>');
+                    echo '<td>'.$no ++.'.</td><td>'.anchor('admin/users/index/'.$group->id,$group->name).'</td><td>'.$group->description.'</td><td>'.anchor('admin/groups/edit/'.$group->id,'<span class="glyphicon glyphicon-pencil"></span>');
                     if(!in_array($group->name, array('admin','members'))) echo ' '.anchor('admin/groups/delete/'.$group->id,'<span class="glyphicon glyphicon-remove"></span>');
                     echo '</td>';
                     echo '</tr>';
@@ -22,5 +20,5 @@
                 echo '<tbody></table>';
             }
         ?>
-    </div><!-- /.box-body -->
-</div><!-- /.box -->
+    </div>
+</div>

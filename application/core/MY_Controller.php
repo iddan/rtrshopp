@@ -10,6 +10,7 @@ class MY_Controller extends CI_Controller {
 		$this->data['page_title'] = 'RTRShopp';
 		$this->data['before_head'] = '';
 		$this->data['before_body'] = '';
+		$this->load->library('breadcrumbs');
 	}
 
 	protected function render($the_view = NULL, $template = 'master')

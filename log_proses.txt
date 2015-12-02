@@ -9,10 +9,13 @@ LOG ..
  - Menu Groups . DONE !!
 
 IN PROSES ..
+ - Menu Users ..
+ - menu profile page ..
+ - cek lagi Step 3.4 bagian paling bawah ..
  
 
 NEXT PROSES .. 
- - Menu Users ..
+ 
 
 Default Login
 Username: admin@admin.com Password: password
@@ -24,4 +27,4 @@ Username: admin@admin.com Password: password
 	$ git push
 	$ git status
 
-LAST git push : "menu Groups done!"
+LAST git push : "users and profile"
