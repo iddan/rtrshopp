@@ -6,6 +6,7 @@ class User extends MY_Controller {
     {
         parent::__construct();
         $this->load->library('ion_auth');
+        $this->load->model('User_model');
     }
  
     public function index()
@@ -85,6 +86,17 @@ class User extends MY_Controller {
      
             $this->session->set_flashdata('message', $this->ion_auth->messages());
             redirect('admin/user/profile', 'refresh');
+        }
+    }
+
+    public function eloquent()
+    {
+        $users = User_model::all();
+        foreach ($users as $key => $value) {
+            echo "ID : ".$value->id."<br>";
+            echo "First Name : ".$value->first_name."<br>";
+            echo "Last Name : ".$value->last_name."<br>";
+            echo "Email : ".$value->email."<br><br>";
         }
     }
 }
