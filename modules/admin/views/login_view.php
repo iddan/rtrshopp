@@ -26,7 +26,7 @@
     <body class="hold-transition login-page">
         <div class="login-box">
             <div class="login-logo">
-                <a href="../../admin"><b>RTRShopp</b> Admin Login</a>
+                <a href="../../admin"><b>RTRShopp</b> Admin Login RTRShopp</a>
             </div><!-- /.login-logo -->
             <div class="login-box-body">
                 <p class="login-box-msg">Sign in to start your session<br><?php echo $this->session->flashdata('message'); ?></p>
