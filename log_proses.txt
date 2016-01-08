@@ -15,6 +15,8 @@ IN PROSES ..
  
 
 NEXT PROSES .. 
+ - copot library ion_auth dan buat system login sendiri ..
+ - ubah base codingan seperti bikinan bone(Sistem_Akademik) ..
  
 
 Default Login
@@ -26,5 +28,11 @@ Username: admin@admin.com Password: password
 	$ git commit -m "penamaan commit" 
 	$ git push
 	$ git status
+
+* merge to branch master
+	$ git branch (lihat branch mana yang active)
+	$ git checkout master
+	$ git merge dev(nama branch lain nya)
+	$ git push origin master	
 
 LAST git push : "users and profile"
