@@ -1,19 +1,13 @@
 {
-	"description": "The CodeIgniter framework",
-	"name": "codeigniter/framework",
-	"type": "project",
-	"homepage": "http://codeigniter.com",
-	"license": "MIT",
-	"support": {
-		"forum": "http://forum.codeigniter.com/",
-		"wiki": "https://github.com/bcit-ci/CodeIgniter/wiki",
-		"irc": "irc://irc.freenode.net/codeigniter",
-		"source": "https://github.com/bcit-ci/CodeIgniter"
-	},
-	"require": {
-		"php": ">=5.2.4"
-	},
-	"require-dev": {
-		"mikey179/vfsStream": "1.1.*"
-	}
+    "description": "The CMS CodeIgniter By Iddan",
+    "name": "codeigniter/framework",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.2.4",
+        "illuminate/database": "5.0.28",
+        "illuminate/events": "5.0.28"
+    },
+    "require-dev": {
+        "mikey179/vfsStream": "1.1.*"
+    }
 }
